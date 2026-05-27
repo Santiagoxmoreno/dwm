@@ -91,7 +91,7 @@ static const char *redshift[]      = { "redshift", "-l", "-35:-58", NULL};
 static const char *killredshift[]  = { "killall", "redshift", NULL};
 static const char *shutdown[]      = { "shutdown", "now", NULL};
 static const char maim_region[]    = "maim -s | xclip -selection clipboard -t image/png";
-static const char maim_monitor[]   = "maim /home/sangl/screenshots/$(date +%b%d-%H%M%S).png";
+static const char maim_monitor[]   = "maim /home/sangl/screenshots/$EPOCHREALTIME.png";
 static const char monitoroff[]     = "sleep 1; xset dpms force standby";
 
 #define XF86_LVol   0x1008ff11
