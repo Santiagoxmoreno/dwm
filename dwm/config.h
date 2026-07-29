@@ -86,7 +86,7 @@ static const char *playerstop[]    = { "playerctl", "stop", NULL};
 static const char *playernext[]    = { "playerctl", "next", NULL};
 static const char *playerprev[]    = { "playerctl", "previous", NULL};
 static const char *headphones[]    = { "pactl", "set-default-sink", "alsa_output.usb-Kingston_Technology_Company_HyperX_Cloud_Flight_Wireless-00.analog-stereo", NULL};
-static const char *speaker[]       = { "pactl", "set-default-sink", "alsa_output.pci-0000_09_00.1.hdmi-stereo", NULL};
+static const char *speaker[]       = { "pactl", "set-default-sink", "alsa_output.pci-0000_0b_00.4.analog-stereo", NULL};
 static const char *redshift[]      = { "redshift", "-l", "-35:-58", NULL};
 static const char *killredshift[]  = { "killall", "redshift", NULL};
 static const char *shutdown[]      = { "shutdown", "now", NULL};
@@ -164,11 +164,11 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} }, // Layout button
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} }, // Resize window with right click
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} }, // Move window with left click
 	{ ClkTagBar,            0,              Button1,        view,           {0} }, // Click workspace to switch
 	{ ClkStatusText,        MODKEY,         Button1,        spawn,          {.v = shutdown } },
+//	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} }, // Layout button
 //	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 //	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 //	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
